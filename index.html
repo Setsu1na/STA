@@ -4,77 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STA城哨 - 智慧安防系统</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 引用外部CSS文件 -->
+    <link rel="stylesheet" href="style.css"> <!-- 引用外部CSS文件 -->
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#intro">项目简介</a></li>
-                <li><a href="#features">技术特点</a></li>
-                <li><a href="#architecture">系统架构</a></li>
-                <li><a href="#modules">功能模块</a></li>
-                <li><a href="#contact">联系我们</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- 左侧侧边栏 -->
+        <aside class="sidebar">
+            <h1>STA城哨</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">项目简介</a></li>
+                    <li><a href="#tech-arch">1 技术与系统架构</a></li>
+                    <li><a href="#workflow">2 工作流程</a></li>
+                    <li><a href="#network-topo">3 网络拓扑架构</a></li>
+                    <li><a href="#interface">4 系统界面功能</a></li>
+                    <li><a href="#demo">5 前端演示</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <!-- 主页部分 -->
-    <section id="intro" class="section">
-        <h1>欢迎来到STA城哨</h1>
-        <p>STA城哨是一个基于时空音频感知的智能安防系统，旨在通过先进的感知技术，智能检测并实时报警城市内的特殊事件，提升城市安全性。</p>
-        <p>我们的目标是构建一个可以实时感知和响应异常事件的智慧城市安防平台，确保城市环境更加安全和高效。</p>
-    </section>
+        <!-- 右侧主内容 -->
+        <main class="content-area">
+            <!-- 项目简介 -->
+            <section id="intro" class="section">
+                <h2>项目简介</h2>
+                <p>本作品的设计目标是在 web 终端建设一套基于时空音频感知的、能够对城市内的特殊事件进行智能检测并及时进行反馈报警的智慧安防系统。我们综合先进性、可拓展性、可靠性和安全性等多方面的因素考虑，以半监督学习的声音事件感知算法为核心，以城市声谱地图为主要的呈现界面，将音频内容安全感知融入传统视频监控系统，实现了一个在真实复杂环境下具备声音事件实时检测、声谱地图及时预警、历史数据快速提取、时空信息统计反馈的智慧安防管控系统。</p>
+                <p>相较于传统视频监控系统，此智慧安防系统有效降低了视觉遮挡与人工监控的依赖，在边缘计算架构下实现高效实时响应，适用于园区安防、街区巡检、轨道交通、应急联动等多个智慧城市典型应用场景。系统已完成本地模拟部署与测试，具备较强的扩展性与落地转化潜力。</p>
+            </section>
 
-    <!-- 技术特点 -->
-    <section id="features" class="section">
-        <h2>技术特点</h2>
-        <ul>
-            <li><strong>时空音频感知：</strong>利用时空音频技术进行事件的空间定位和实时声音分析，快速识别城市内的异常声音。</li>
-            <li><strong>智能事件检测：</strong>通过机器学习和数据分析技术，实时识别并判断特殊事件，如火灾、爆炸、异常聚集等。</li>
-            <li><strong>快速报警与响应：</strong>系统能够在事件发生后及时触发报警机制，并自动向相关人员发出警报。</li>
-            <li><strong>高精度定位：</strong>结合时空信息精确定位事件发生的具体位置，优化响应时间和处理效率。</li>
-        </ul>
-    </section>
+            <!-- 技术架构 -->
+            <section id="tech-arch" class="section">
+                <h2>1 技术与系统架构</h2>
+                <p>在技术架构上，STA城哨采用五级系统结构：通过麦克风与摄像头采集音视频数据，基于 FBCRNN 与 Tag-conditioned CNN 构建半监督声音事件检测模型，并结合 Redis 与 Flink 构建实时流处理能力；以 React + Ant Design + Leaflet 为基础，提供高交互性的城市声谱图与视频联动界面，支持用户对事件位置、类型与时序的直观感知与快速响应。</p>
+                <h3>1.1 系统总体架构</h3>
+                <p>本系统进行了总体架构设计，将各个功能进行了分层。本作品采用五层架构设计，分别为物理层、数据层、支撑层、业务层和应用层。</p>
+                <ul>
+                    <li><strong>物理层:</strong> 包含本系统的硬件设备。其中我们采用安防摄像头集群作为本项目的音视频采集群，负责实时收集音视频数据；另外选用了若干台服务器与网络设备来搭建系统网络架构。</li>
+                    <li><strong>数据层:</strong> 包含本系统所用的数据库。实现所用音视频数据和声音事件检测数据的安全存储，并针对高频前后端交互做了缓存，实现响应速度与性能优化。</li>
+                    <li><strong>支撑层:</strong> 包含本系统使用的重要框架或技术。这些技术为系统上层的业务实现做了支撑，保证了系统功能的高效实现。</li>
+                    <li><strong>业务层:</strong> 包含本系统实现的业务功能。分为数据采集，数据处理，数据展示，系统管理四大部分。其中前三部分是系统的核心，负责实现应用层中让用户使用的五大功能，系统管理部分则负责实现管理员权限管理的功能。</li>
+                    <li><strong>应用层:</strong> 包含系统向用户展现的应用功能，为用户提供城市安防管控服务。</li>
+                </ul>
+                <figure>
+                    <img src="images/System_Architecture.png" alt="系统总体架构">
+                    <figcaption>图1 系统总体架构</figcaption>
+                </figure>
+            </section>
 
-    <!-- 系统架构 -->
-    <section id="architecture" class="section">
-        <h2>系统架构</h2>
-        <p>STA城哨采用分布式架构，支持多点监控与数据汇总。系统包含以下主要组件：</p>
-        <ul>
-            <li><strong>感知层：</strong>部署在城市各个重要区域的传感器，负责收集时空音频数据。</li>
-            <li><strong>数据处理层：</strong>采用云计算平台进行数据存储与分析，实时处理各类感知数据。</li>
-            <li><strong>决策层：</strong>基于实时数据和历史数据，利用人工智能算法进行事件识别与决策。</li>
-            <li><strong>报警层：</strong>事件发生后，系统会自动向监控人员和相关部门发出报警信号。</li>
-        </ul>
-    </section>
+            <!-- 工作流程 -->
+            <section id="workflow" class="section">
+                <h2>2 工作流程</h2>
+                <p>系统工作流程指由音视频采集设备采集数据，发送给服务器调用音频事件感知模块进行实时检测识别，最终得出异常结果实时报警给用户 web 网页终端的整个过程｡本作品通过多模块实现整个系统的多层次架构管理——通过音视频采集群进行数据采集和数据存储，通过音频事件检测算法检测声音事件与时空信息，并通过 web 平台对智能监控信息进行集中式管理。实现在真实复杂环境下高准确率和强实时性的智慧城市安防管控系统。</p>
+                <figure>
+                    <img src="images/Workflow.png" alt="系统工作流程">
+                    <figcaption>图2 系统工作流程</figcaption>
+                </figure>
+            </section>
 
-    <!-- 功能模块 -->
-    <section id="modules" class="section">
-        <h2>功能模块</h2>
-        <p>STA城哨包括多个功能模块，以确保全面的智能安防服务：</p>
-        <ul>
-            <li><strong>声音监控模块：</strong>实时监控并分析城市环境中的声音信号。</li>
-            <li><strong>事件识别模块：</strong>智能分析和判断是否发生异常事件。</li>
-            <li><strong>报警模块：</strong>根据系统判断结果自动触发报警，通知相关人员进行响应。</li>
-            <li><strong>数据存储与管理：</strong>所有的事件和报警记录会存储在云平台，方便后续查看和分析。</li>
-        </ul>
-    </section>
+            <!-- 网络拓扑 -->
+            <section id="network-topo" class="section">
+                <h2>3 网络拓扑架构</h2>
+                <p>结合系统总体架构和整体的工作流程，团队对本作品的网络拓扑架构也进行了设计。</p>
+                <p>网络拓扑架构中的结点分为城市声音采集单元、音频事件感知系统、可视化指挥管理中心三部分。系统运行时，采集单元的各种物理设备将音视频数据编码压缩后，以内网路由的方式转发至音频事件感知系统。感知系统结点负责解析事件概率后将数据网络转发至可视化指挥终端。在管控中心，工作人员再根据可视化界面的显示数据定位危险事件并采取报警或其他处置措施。</p>
+                <figure>
+                    <img src="images/Network_Topology.png" alt="网络拓扑架构">
+                    <figcaption>图3 网络拓扑架构</figcaption>
+                </figure>
+            </section>
 
-    <!-- 联系我们 -->
-    <section id="contact" class="section">
-        <h2>联系我们</h2>
-        <p>如果你有任何问题或需要进一步了解 STA城哨 智慧安防系统，请联系我们：</p>
-        <ul>
-            <li><strong>邮箱：</strong>contact@stacitywatch.com</li>
-            <li><strong>电话：</strong>+86 123 456 7890</li>
-        </ul>
-    </section>
+            <!-- 系统界面 -->
+            <section id="interface" class="section">
+                <h2>4 系统界面功能</h2>
+                <p>本作品的呈现方式是 web 端安全监控平台，系统界面整体美观、便于操作。分为实时地图页面、历史地图页面、日报系统页面、监控系统页面四个部分。分别实现了实时区域性安全监控、危险事件报警，区域历史时空数据查询、实时/历史音视频数据查询反馈以及区域安全数据日/周报等功能。该系统界面方便管理者查看某区域当前/历史时间的安全状况和历史危险事件，便于挖掘某地一段时间内/某刻多地的事件关系，进行时空数据的深度展示，使城市动态可被实时地觉察、理解和推测。</p>
+                <h3>4.1 实时地图页面</h3>
+                <p>登陆到智慧城市安防系统之后，将进入到实时地图页面。实时地图页面负责展示当前时间点正在发生的实时事件信息。其中事件预警功能将分类别展示实时发生情况；实时区域安全功能将分区域战术区域实时安全指数；全局实时提醒功能将全局实时提醒危险事件发生；实时时间详情查看功能将分颜色显示实时事件地理信息。</p>
+                <h3>4.2 历史地图页面</h3>
+                <p>历史地图页面负责进行安防数据的时空信息查看，可用于用户对于某一时间段的指定地点发生的历史事件点来进行回顾查看。其整体布局与实时地图页面相似，但是在顶部和底部分别增加了日期选择栏以及可以随意拖动的时间选择滑条，便于用户回看锁定历史信息。其中历史时间筛选功能将按时间段展示历史事件发生情况；历史事件统计功能将分类别展示历史事件发生情况；历史区域安全功能将分区域展示历史安全指数；历史事件点查看功能将分颜色显示历史事件地理信息；历史事件详情查看功能将查看历史事件点的详情信息。</p>
+                <h3>4.3 日报系统页面</h3>
+                <p>日报系统页面主要负责数据的统计与查询工作。包括区域内本月各事件发生总数、每日区域安全指数、实时预警消息、一年中每个月事件总数的变化情况以及特殊事件的查询和筛选工作。帮助区域监管者更好地利用庞大的安防历史数据，利用历史数据进行统筹规划，避免未知风险。其中事件总数统计功能将展示各类别事件历史总数；区域安全指数功能将展示各区域实时安全指数；月事件总数功能将展示各月事件发生数变化趋势；事件查询及筛选功能将查询和筛选历史事件内容；报警消息汇总功能将提供实时安防消息提示。</p>
+                <h3>4.4 监控管理页面</h3>
+                <p>监控系统主要负责监控视频的查看与查询工作。方便同时查看多个视频监控并且直观地查看当前播放的视频中各项事件发生的可能性，大大提高监控视频查看的效率。其中视图控制功能将在单视图或多视图模式下查看监控视频；监控视频选择功能将筛选及导入监控视频；事件概率功能将展示当前视频内事件概率。</p>
+                <figure>
+                    <img src="images/System_Functions.png" alt="系统界面功能">
+                    <figcaption>图4 系统界面功能</figcaption>
+                </figure>
+            </section>
+
+            <!-- 前端演示 -->
+            <section id="demo" class="section">
+                <h2>前端演示</h2>
+                <p>以下视频展示了系统前端界面的主要功能和交互流程：</p>
+                <video controls width="100%" style="max-width: 800px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px;">
+                    <source src="videos/frontend.mp4" type="video/mp4">
+                    您的浏览器不支持 Video 标签。
+                </video>
+            </section>
+        </main>
+    </div>
 
     <!-- 页脚 -->
     <footer>
         <p>&copy; 2025 STA城哨项目. 版权所有.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.sidebar nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start' // 滚动到目标元素的顶部
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

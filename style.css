@@ -1,0 +1,144 @@
+/* 全局和基础样式 */
+html {
+    scroll-behavior: smooth; /* 启用CSS平滑滚动 */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex; /* 使用flex布局 */
+    min-height: 100vh; /* 确保body至少和视口一样高 */
+    flex-direction: column; /* 页脚置底 */
+}
+
+.container {
+    display: flex;
+    flex: 1; /* 占据剩余空间 */
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: 220px; /* 侧边栏固定宽度 */
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100vh; /* 侧边栏高度为视口高度 */
+    position: sticky; /* 固定侧边栏 */
+    top: 0;
+    overflow-y: auto; /* 如果内容过多则允许滚动 */
+}
+
+.sidebar h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav a {
+    color: #eee; /* 侧边栏链接颜色 */
+    text-decoration: none;
+    display: block; /* 让链接充满整个li */
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a:hover {
+    background-color: #555; /* 鼠标悬停效果 */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* 主内容区域样式 */
+.content-area {
+    flex: 1; /* 占据剩余宽度 */
+    padding: 30px;
+    overflow-y: auto; /* 主要内容区域滚动 */
+    background-color: #f9f9f9; /* 内容区背景色稍作区分 */
+}
+
+.section {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加滚动边距，防止标题被侧边栏遮挡 */
+    scroll-margin-top: 20px;
+}
+
+.section h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.section h3 {
+    color: #555;
+    margin-top: 1.8em;
+    font-size: 1.3em;
+}
+
+figure {
+    text-align: center;
+    margin: 25px 0;
+}
+
+figure img {
+    max-width: 90%; /* 调整图片最大宽度 */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+figure figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+ul:not(.sidebar nav ul) { /* 避免影响侧边栏列表 */
+    padding-left: 30px;
+}
+
+ul:not(.sidebar nav ul) li {
+    margin-bottom: 12px;
+}
+
+a:not(.sidebar nav a) { /* 避免影响侧边栏链接 */
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:not(.sidebar nav a):hover {
+    text-decoration: underline;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222; /* 页脚颜色稍深 */
+    color: #aaa;
+    width: 100%; /* 页脚宽度占满 */
+    margin-top: auto; /* 将页脚推到底部 */
+} 
