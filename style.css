@@ -4,12 +4,15 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */ /* 移除旧字体 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 使用更现代的字体 */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    /* background-color: #f4f4f4; */ /* 调整背景色 */
+    background-color: #eef1f5; /* 更柔和的背景色 */
+    /* color: #333; */ /* 调整默认文字颜色 */
+    color: #4a4a4a;
     display: flex; /* 使用flex布局 */
     min-height: 100vh; /* 确保body至少和视口一样高 */
     flex-direction: column; /* 页脚置底 */
@@ -23,20 +26,24 @@ body {
 /* 侧边栏样式 */
 .sidebar {
     width: 220px; /* 侧边栏固定宽度 */
-    background: #333;
-    color: #fff;
+    /* background: #333; */ /* 调整侧边栏背景色 */
+    background: linear-gradient(135deg, #3a3a3a 0%, #2c2c2c 100%); /* 添加渐变背景 */
+    color: #e0e0e0; /* 调整侧边栏文字颜色 */
     padding: 20px;
     height: 100vh; /* 侧边栏高度为视口高度 */
     position: sticky; /* 固定侧边栏 */
     top: 0;
     overflow-y: auto; /* 如果内容过多则允许滚动 */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 添加细微阴影 */
 }
 
 .sidebar h1 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* 增加标题下方间距 */
     font-size: 1.8em;
     text-align: center;
+    color: #ffffff; /* 标题颜色设为白色 */
+    font-weight: 600; /* 字体加粗 */
 }
 
 .sidebar nav ul {
@@ -49,16 +56,18 @@ body {
 }
 
 .sidebar nav a {
-    color: #eee; /* 侧边栏链接颜色 */
+    /* color: #eee; */ /* 调整链接颜色 */
+    color: #d0d0d0;
     text-decoration: none;
     display: block; /* 让链接充满整个li */
-    padding: 8px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px; /* 增加内边距 */
+    border-radius: 6px; /* 增加圆角 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 平滑过渡效果 */
 }
 
-.sidebar nav a:hover {
-    background-color: #555; /* 鼠标悬停效果 */
+.sidebar nav a:hover, .sidebar nav a.active { /* 添加 active 类用于标记当前部分 */
+    /* background-color: #555; */ /* 调整悬停/活动背景色 */
+    background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
     text-decoration: none;
 }
@@ -67,33 +76,45 @@ body {
 /* 主内容区域样式 */
 .content-area {
     flex: 1; /* 占据剩余宽度 */
-    padding: 30px;
+    padding: 40px; /* 增加内边距 */
     overflow-y: auto; /* 主要内容区域滚动 */
-    background-color: #f9f9f9; /* 内容区背景色稍作区分 */
+    /* background-color: #f9f9f9; */ /* 移除单一背景色，使用body背景 */
 }
 
 .section {
-    background: #fff;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #ffffff; /* 白色背景 */
+    padding: 30px; /* 增加内边距 */
+    margin-bottom: 40px; /* 增加区块间距 */
+    border-radius: 12px; /* 更大的圆角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 更柔和的阴影 */
     /* 添加滚动边距，防止标题被侧边栏遮挡 */
-    scroll-margin-top: 20px;
+    scroll-margin-top: 30px; /* 增加滚动边距 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 为区块添加悬停效果 */
+.section:hover {
+    transform: translateY(-5px); /* 轻微上移 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* 增强阴影 */
 }
 
 .section h2 {
-    color: #333;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    /* color: #333; */ /* 调整标题颜色 */
+    color: #2c3e50; /* 深蓝灰色 */
+    border-bottom: 2px solid #ecf0f1; /* 调整下边框颜色 */
+    padding-bottom: 15px; /* 增加内边距 */
     margin-top: 0;
-    font-size: 1.6em;
+    margin-bottom: 25px; /* 增加标题下方间距 */
+    font-size: 1.8em; /* 增加标题字号 */
+    font-weight: 600; /* 字体加粗 */
 }
 
 .section h3 {
-    color: #555;
-    margin-top: 1.8em;
-    font-size: 1.3em;
+    /* color: #555; */ /* 调整副标题颜色 */
+    color: #34495e; /* 稍浅的蓝灰色 */
+    margin-top: 2em; /* 增加上方间距 */
+    font-size: 1.4em; /* 增加副标题字号 */
+    font-weight: 600;
 }
 
 figure {
@@ -104,16 +125,23 @@ figure {
 figure img {
     max-width: 90%; /* 调整图片最大宽度 */
     height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    /* border: 1px solid #ddd; */ /* 移除旧边框 */
+    border-radius: 8px; /* 增加圆角 */
     padding: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.1); */ /* 调整阴影 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 更明显的阴影 */
+    transition: transform 0.3s ease; /* 添加过渡 */
+}
+
+/* 图片悬停放大效果 */
+figure img:hover {
+    transform: scale(1.03);
 }
 
 figure figcaption {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 10px;
+    font-size: 0.95em; /* 稍大字号 */
+    color: #7f8c8d; /* 调整颜色 */
+    margin-top: 15px; /* 增加间距 */
 }
 
 ul:not(.sidebar nav ul) { /* 避免影响侧边栏列表 */
@@ -125,20 +153,49 @@ ul:not(.sidebar nav ul) li {
 }
 
 a:not(.sidebar nav a) { /* 避免影响侧边栏链接 */
-    color: #007BFF;
+    /* color: #007BFF; */ /* 调整链接颜色 */
+    color: #3498db; /* 更柔和的蓝色 */
     text-decoration: none;
+    transition: color 0.3s ease; /* 添加颜色过渡 */
 }
 
 a:not(.sidebar nav a):hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */ /* 移除下划线 */
+    color: #2980b9; /* 悬停时颜色变深 */
 }
 
 /* 页脚样式 */
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background: #222; /* 页脚颜色稍深 */
-    color: #aaa;
+    padding: 1.5rem 0; /* 增加内边距 */
+    background: #2c3e50; /* 调整页脚背景色 */
+    color: #bdc3c7; /* 调整页脚文字颜色 */
     width: 100%; /* 页脚宽度占满 */
     margin-top: auto; /* 将页脚推到底部 */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* 添加顶部阴影 */
+}
+
+/* 添加视频样式 */
+video {
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 阴影 */
+    border: 1px solid #ecf0f1; /* 添加浅色边框 */
+}
+
+/* 为滚动条添加基本样式（可选，浏览器兼容性有限） */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #95a5a6;
 } 

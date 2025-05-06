@@ -108,21 +108,74 @@
     </footer>
 
     <script>
+        // 平滑滚动到锚点
         document.querySelectorAll('.sidebar nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start' // 滚动到目标元素的顶部
+                    // 使用 window.scrollTo 实现平滑滚动并考虑侧边栏的 sticky 定位
+                    // 计算目标元素的顶部位置，减去一个偏移量（例如20px）以确保标题不被遮挡
+                    const offsetTop = targetElement.offsetTop - 20; 
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
                     });
+                    
+                    // 点击时立即更新 active 类，提供即时反馈
+                    updateActiveLink(targetId);
                 }
             });
         });
+
+        // 更新侧边栏链接的 active 状态
+        function updateActiveLink(activeId) {
+            document.querySelectorAll('.sidebar nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${activeId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // 监听滚动事件，高亮当前可见区域对应的导航链接
+        const sections = document.querySelectorAll('.section');
+        const sidebarLinks = document.querySelectorAll('.sidebar nav a');
+        
+        // 创建 Intersection Observer 实例
+        const observerOptions = {
+            root: null, // 使用视口作为根
+            rootMargin: '0px', 
+            threshold: 0.4 // 当区域 40% 可见时触发
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 当某个 section 进入视口时，更新对应的导航链接状态
+                    const targetId = entry.target.getAttribute('id');
+                    updateActiveLink(targetId);
+                }
+            });
+        }, observerOptions);
+
+        // 为每个 section 添加观察
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // 页面加载时，根据初始滚动位置设置 active 状态（可选）
+        // 可以在页面加载后，手动检查哪个 section 在视口顶部附近并更新
+        // 这里简化处理，默认第一个链接为 active，或在滚动后自动更新
+        // window.addEventListener('load', () => {
+        //     // 简单的处理：默认激活第一个链接，或者可以计算初始滚动位置
+        //     if(sidebarLinks.length > 0) {
+        //         sidebarLinks[0].classList.add('active');
+        //     } 
+        // });
+
     </script>
 </body>
 </html>
