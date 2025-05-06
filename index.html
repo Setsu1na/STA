@@ -19,6 +19,7 @@
                     <li><a href="#network-topo">3 网络拓扑架构</a></li>
                     <li><a href="#interface">4 系统界面功能</a></li>
                     <li><a href="#demo">5 前端演示</a></li>
+                    <li><a href="#testing">6 系统测试</a></li>
                     <!-- 添加 GitHub 仓库链接 -->
                     <li style="margin-top: 20px; border-top: 1px solid #4a505a; padding-top: 15px;">
                         <a href="https://github.com/Setsu1na/STA/" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
@@ -80,6 +81,11 @@
                     <li><strong>城市应急联动指挥：</strong> 作为城市应急系统的信息输入源，提供实时的声音事件报警和定位，辅助指挥中心判断事件性质、影响范围，实现更高效的跨部门应急联动。</li>
                     <li><strong>特定区域环境监测：</strong> 例如在禁止鸣笛区域监测鸣笛声，在安静区域监测噪音污染等，为城市管理提供数据支撑。</li>
                 </ul>
+                <!-- 添加应用场景图片 -->
+                <figure>
+                    <img src="images/Application.png" alt="系统典型应用场景图示">
+                    <figcaption>图1.3 系统典型应用场景</figcaption>
+                </figure>
             
                 <!-- 创新点 (现在是 tech-arch 内的子部分) -->
                 <h3 id="innovations">1.4 项目创新点</h3>
@@ -91,6 +97,11 @@
                     <li><strong>高效半监督学习应用：</strong> 成功将前沿的半监督音频处理技术应用于实际安防场景，有效解决了真实环境下标注数据稀疏的问题，提升了模型的实用性。</li>
                     <li><strong>多层次融合架构：</strong> 构建了从感知、处理到应用的多层次系统架构，实现了音频、视频、地理信息等多模态数据的有效融合与协同工作。</li>
                 </ul>
+                <!-- 添加项目创新点图片 -->
+                <figure>
+                    <img src="images/Innovation.png" alt="项目主要创新点图示">
+                    <figcaption>图1.4 项目主要创新点</figcaption>
+                </figure>
             </section>
 
             <!-- 工作流程 -->
@@ -158,20 +169,58 @@
 
             <!-- 前端演示 -->
             <section id="demo" class="section">
-                <h2>前端演示</h2>
+                <h2>5 前端演示</h2>
                 <p>以下视频展示了系统前端界面的主要功能和交互流程：</p>
                 <video controls width="100%" style="max-width: 800px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px;">
                     <source src="videos/frontend.mp4" type="video/mp4">
                     您的浏览器不支持 Video 标签。
                 </video>
             </section>
+
+            <!-- 新增系统测试部分 -->
+            <section id="testing" class="section">
+                <h2>6 系统测试</h2>
+                <p>为了验证系统的有效性和性能，我们进行了一系列测试，包括功能完整性、算法准确性、边界条件及系统性能等。</p>
+                
+                <h3>6.1 功能测试</h3>
+                <p>对系统的各项功能进行了测试，确保用户界面、数据处理、事件报警、历史查询等模块按预期工作。</p>
+                <figure>
+                    <img src="images/Test_1.png" alt="功能测试结果示例">
+                    <figcaption>图6.1 功能测试概览</figcaption>
+                </figure>
+
+                <h3>6.2 算法检测准确率比较</h3>
+                <p>将本系统采用的算法与其他基线方法在标准数据集上进行比较，评估其在不同信噪比和复杂环境下的检测准确率、召回率和 F1 分数。</p>
+                <figure>
+                    <img src="images/Test_2.png" alt="算法准确率比较图">
+                    <figcaption>图6.2 算法准确率对比</figcaption>
+                </figure>
+
+                <h3>6.3 事件类别和时间边界测试结果</h3>
+                <p>测试系统对不同声音事件类别的区分能力，以及对事件发生起止时间点检测的精确度。</p>
+                <figure>
+                    <img src="images/Test_3.png" alt="事件类别与时间边界测试结果">
+                    <figcaption>图6.3 事件类别与时间边界测试</figcaption>
+                </figure>
+
+                <h3>6.4 其他性能测试</h3>
+                <p>包括系统的实时响应延迟、并发处理能力、资源消耗（CPU、内存）等关键性能指标的测试。</p>
+                <figure>
+                    <img src="images/Test_4.png" alt="系统性能测试结果">
+                    <figcaption>图6.4 系统性能测试</figcaption>
+                </figure>
+            </section>
+
         </main>
     </div>
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 STA城哨项目. 版权所有.</p>
+        <p>&copy; 2025 STA城哨项目</p>
     </footer>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" id="backToTopBtn" title="返回顶部">&#9650;</a>
 
     <script>
         // 平滑滚动到锚点 和 处理外部链接
@@ -250,6 +299,29 @@
         //         sidebarLinks[0].classList.add('active');
         //     } 
         // });
+
+        // --- 返回顶部按钮逻辑 ---
+        const backToTopButton = document.getElementById("backToTopBtn");
+        const scrollThreshold = 300; // 向下滚动多少像素后显示按钮
+
+        // 监听滚动事件
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+                backToTopButton.style.display = "block"; // 或者添加一个 .show 类
+            } else {
+                backToTopButton.style.display = "none"; // 或者移除 .show 类
+            }
+        });
+
+        // 监听按钮点击事件
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault(); // 阻止链接的默认行为
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // --- 返回顶部按钮逻辑结束 ---
 
     </script>
 </body>
