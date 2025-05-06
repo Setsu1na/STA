@@ -17,9 +17,9 @@
                     <li><a href="#tech-arch">1 技术与系统架构</a></li>
                     <li><a href="#workflow">2 工作流程</a></li>
                     <li><a href="#network-topo">3 网络拓扑架构</a></li>
-                    <li><a href="#interface">4 系统界面功能</a></li>
-                    <li><a href="#demo">5 前端演示</a></li>
-                    <li><a href="#testing">6 系统测试</a></li>
+                    <li><a href="#testing">4 系统测试</a></li>
+                    <li><a href="#interface">5 系统界面功能</a></li>
+                    <li><a href="#demo">6 前端演示</a></li>
                     <!-- 添加 GitHub 仓库链接 -->
                     <li style="margin-top: 20px; border-top: 1px solid #4a505a; padding-top: 15px;">
                         <a href="https://github.com/Setsu1na/STA/" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
@@ -52,7 +52,7 @@
                 </ul>
                 <figure>
                     <img src="images/System_Architecture.png" alt="系统总体架构">
-                    <figcaption>图1 系统总体架构</figcaption>
+                    <figcaption>图1.1 系统总体架构</figcaption>
                 </figure>
             
                 <!-- 核心算法 (现在是 tech-arch 内的子部分) -->
@@ -125,90 +125,90 @@
                 </figure>
             </section>
 
+            <!-- 系统测试部分 (移动到这里) -->
+            <section id="testing" class="section">
+                <h2>4 系统测试</h2>
+                <p>为了验证系统的有效性和性能，我们进行了一系列测试，包括功能完整性、算法准确性、边界条件及系统性能等。</p>
+                
+                <h3>4.1 功能测试</h3>
+                <p>对系统的各项功能进行了测试，确保用户界面、数据处理、事件报警、历史查询等模块按预期工作。</p>
+                <figure>
+                    <img src="images/Test_1.png" alt="功能测试结果示例">
+                    <figcaption>图4.1 功能测试概览</figcaption>
+                </figure>
+
+                <h3>4.2 算法检测准确率比较</h3>
+                <p>将本系统采用的算法与其他基线方法在标准数据集上进行比较，评估其在不同信噪比和复杂环境下的检测准确率、召回率和 F1 分数。</p>
+                <figure>
+                    <img src="images/Test_2.png" alt="算法准确率比较图">
+                    <figcaption>图4.2 算法准确率对比</figcaption>
+                </figure>
+
+                <h3>4.3 事件类别和时间边界测试结果</h3>
+                <p>测试系统对不同声音事件类别的区分能力，以及对事件发生起止时间点检测的精确度。</p>
+                <figure>
+                    <img src="images/Test_3.png" alt="事件类别与时间边界测试结果">
+                    <figcaption>图4.3 事件类别与时间边界测试</figcaption>
+                </figure>
+
+                <h3>4.4 其他性能测试</h3>
+                <p>包括系统的实时响应延迟、并发处理能力、资源消耗（CPU、内存）等关键性能指标的测试。</p>
+                <figure>
+                    <img src="images/Test_4.png" alt="系统性能测试结果">
+                    <figcaption>图4.4 系统性能测试</figcaption>
+                </figure>
+            </section>
+            
             <!-- 系统界面 -->
             <section id="interface" class="section">
-                <h2>4 系统界面功能</h2>
+                <h2>5 系统界面功能</h2>
                 <p>本作品的呈现方式是 web 端安全监控平台，<b>前端基于 React 框架，结合 Ant Design 组件库和 Leaflet 地图库进行开发，</b>系统界面整体美观、便于操作。分为实时地图页面、历史地图页面、日报系统页面、监控系统页面四个部分。分别实现了实时区域性安全监控、危险事件报警，区域历史时空数据查询、实时/历史音视频数据查询反馈以及区域安全数据日/周报等功能。该系统界面方便管理者查看某区域当前/历史时间的安全状况和历史危险事件，便于挖掘某地一段时间内/某刻多地的事件关系，进行时空数据的深度展示，使城市动态可被实时地觉察、理解和推测。</p>
                 <figure>
                     <img src="images/System_Functions.png" alt="系统界面功能概览">
-                    <figcaption>图4 系统主要功能界面概览</figcaption>
+                    <figcaption>图5.1 系统主要功能界面概览</figcaption>
                 </figure>
                 
-                <h3>4.1 实时地图页面</h3>
+                <h3>5.1 实时地图页面</h3>
                 <p>登陆到智慧城市安防系统之后，将进入到实时地图页面。实时地图页面负责展示当前时间点正在发生的实时事件信息。其中事件预警功能将分类别展示实时发生情况；实时区域安全功能将分区域战术区域实时安全指数；全局实时提醒功能将全局实时提醒危险事件发生；实时时间详情查看功能将分颜色显示实时事件地理信息。</p>
                 <figure>
                     <img src="images/Page_1.png" alt="实时地图页面截图1">
-                    <figcaption>图4.1 实时地图页面 - 事件预警与区域安全</figcaption>
+                    <figcaption>图5.2 实时地图页面 - 事件预警与区域安全</figcaption>
                 </figure>
                 <figure>
                     <img src="images/Page_2.png" alt="实时地图页面截图2">
-                    <figcaption>图4.2 实时地图页面 - 事件点详情与全局提醒</figcaption>
+                    <figcaption>图5.3 实时地图页面 - 事件点详情与全局提醒</figcaption>
                 </figure>
 
-                <h3>4.2 历史地图页面</h3>
+                <h3>5.2 历史地图页面</h3>
                 <p>历史地图页面负责进行安防数据的时空信息查看，可用于用户对于某一时间段的指定地点发生的历史事件点来进行回顾查看。其整体布局与实时地图页面相似，但是在顶部和底部分别增加了日期选择栏以及可以随意拖动的时间选择滑条，便于用户回看锁定历史信息。其中历史时间筛选功能将按时间段展示历史事件发生情况；历史事件统计功能将分类别展示历史事件发生情况；历史区域安全功能将分区域展示历史安全指数；历史事件点查看功能将分颜色显示历史事件地理信息；历史事件详情查看功能将查看历史事件点的详情信息。</p>
                 <figure>
                     <img src="images/Page_3.png" alt="历史地图页面截图">
-                    <figcaption>图4.3 历史地图页面 - 时间筛选与事件回溯</figcaption>
+                    <figcaption>图5.4 历史地图页面 - 时间筛选与事件回溯</figcaption>
                 </figure>
 
-                <h3>4.3 日报系统页面</h3>
+                <h3>5.3 日报系统页面</h3>
                 <p>日报系统页面主要负责数据的统计与查询工作。包括区域内本月各事件发生总数、每日区域安全指数、实时预警消息、一年中每个月事件总数的变化情况以及特殊事件的查询和筛选工作。帮助区域监管者更好地利用庞大的安防历史数据，利用历史数据进行统筹规划，避免未知风险。其中事件总数统计功能将展示各类别事件历史总数；区域安全指数功能将展示各区域实时安全指数；月事件总数功能将展示各月事件发生数变化趋势；事件查询及筛选功能将查询和筛选历史事件内容；报警消息汇总功能将提供实时安防消息提示。</p>
                 <figure>
                     <img src="images/Page_4.png" alt="日报系统页面截图">
-                    <figcaption>图4.4 日报系统页面 - 数据统计与事件查询</figcaption>
+                    <figcaption>图5.5 日报系统页面 - 数据统计与事件查询</figcaption>
                 </figure>
 
-                <h3>4.4 监控管理页面</h3>
+                <h3>5.4 监控管理页面</h3>
                 <p>监控系统主要负责监控视频的查看与查询工作。方便同时查看多个视频监控并且直观地查看当前播放的视频中各项事件发生的可能性，大大提高监控视频查看的效率。其中视图控制功能将在单视图或多视图模式下查看监控视频；监控视频选择功能将筛选及导入监控视频；事件概率功能将展示当前视频内事件概率。</p>
                 <figure>
                     <img src="images/Page_5.png" alt="监控管理页面截图">
-                    <figcaption>图4.5 监控管理页面 - 多视图查看与事件概率</figcaption>
+                    <figcaption>图5.6 监控管理页面 - 多视图查看与事件概率</figcaption>
                 </figure>
             </section>
 
             <!-- 前端演示 -->
             <section id="demo" class="section">
-                <h2>5 前端演示</h2>
+                <h2>6 前端演示</h2>
                 <p>以下视频展示了系统前端界面的主要功能和交互流程：</p>
                 <video controls width="100%" style="max-width: 800px; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px;">
                     <source src="videos/frontend.mp4" type="video/mp4">
                     您的浏览器不支持 Video 标签。
                 </video>
-            </section>
-
-            <!-- 新增系统测试部分 -->
-            <section id="testing" class="section">
-                <h2>6 系统测试</h2>
-                <p>为了验证系统的有效性和性能，我们进行了一系列测试，包括功能完整性、算法准确性、边界条件及系统性能等。</p>
-                
-                <h3>6.1 功能测试</h3>
-                <p>对系统的各项功能进行了测试，确保用户界面、数据处理、事件报警、历史查询等模块按预期工作。</p>
-                <figure>
-                    <img src="images/Test_1.png" alt="功能测试结果示例">
-                    <figcaption>图6.1 功能测试概览</figcaption>
-                </figure>
-
-                <h3>6.2 算法检测准确率比较</h3>
-                <p>将本系统采用的算法与其他基线方法在标准数据集上进行比较，评估其在不同信噪比和复杂环境下的检测准确率、召回率和 F1 分数。</p>
-                <figure>
-                    <img src="images/Test_2.png" alt="算法准确率比较图">
-                    <figcaption>图6.2 算法准确率对比</figcaption>
-                </figure>
-
-                <h3>6.3 事件类别和时间边界测试结果</h3>
-                <p>测试系统对不同声音事件类别的区分能力，以及对事件发生起止时间点检测的精确度。</p>
-                <figure>
-                    <img src="images/Test_3.png" alt="事件类别与时间边界测试结果">
-                    <figcaption>图6.3 事件类别与时间边界测试</figcaption>
-                </figure>
-
-                <h3>6.4 其他性能测试</h3>
-                <p>包括系统的实时响应延迟、并发处理能力、资源消耗（CPU、内存）等关键性能指标的测试。</p>
-                <figure>
-                    <img src="images/Test_4.png" alt="系统性能测试结果">
-                    <figcaption>图6.4 系统性能测试</figcaption>
-                </figure>
             </section>
 
         </main>
@@ -271,8 +271,12 @@
         // 创建 Intersection Observer 实例
         const observerOptions = {
             root: null, // 使用视口作为根
-            rootMargin: '0px', 
-            threshold: 0.4 // 当区域 40% 可见时触发
+            // rootMargin: '0px', 
+            // threshold: 0.4 // 当区域 40% 可见时触发
+            // 调整 rootMargin: 当 section 顶部距离视口顶部 60px 以内，且其底部至少还有一部分在视口下方50%以上时触发
+            // 或者简单地：当 section 顶部进入视口上方一定区域时就认为可见
+            rootMargin: '-60px 0px -40% 0px', // 顶部偏移60px，底部至少40%还在视口或更下方才算离开
+            threshold: 0.01 // 只要有一点点进入指定区域就触发
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
