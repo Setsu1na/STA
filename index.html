@@ -19,6 +19,10 @@
                     <li><a href="#network-topo">3 网络拓扑架构</a></li>
                     <li><a href="#interface">4 系统界面功能</a></li>
                     <li><a href="#demo">5 前端演示</a></li>
+                    <!-- 添加 GitHub 仓库链接 -->
+                    <li style="margin-top: 20px; border-top: 1px solid #4a505a; padding-top: 15px;">
+                        <a href="https://github.com/Setsu1na/STA/" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -170,34 +174,43 @@
     </footer>
 
     <script>
-        // 平滑滚动到锚点
+        // 平滑滚动到锚点 和 处理外部链接
         document.querySelectorAll('.sidebar nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+                const href = this.getAttribute('href');
+                
+                // 检查链接是否是页内锚点链接
+                if (href && href.startsWith('#')) {
+                    e.preventDefault(); // 只对页内链接阻止默认行为
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
 
-                if (targetElement) {
-                    // 使用 window.scrollTo 实现平滑滚动并考虑侧边栏的 sticky 定位
-                    // 计算目标元素的顶部位置，减去一个偏移量（例如20px）以确保标题不被遮挡
-                    const offsetTop = targetElement.offsetTop - 20; 
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                    
-                    // 点击时立即更新 active 类，提供即时反馈
-                    updateActiveLink(targetId);
-                }
+                    if (targetElement) {
+                        // 使用 window.scrollTo 实现平滑滚动并考虑侧边栏的 sticky 定位
+                        const offsetTop = targetElement.offsetTop - 20; 
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 点击时立即更新 active 类，提供即时反馈
+                        updateActiveLink(targetId);
+                    }
+                } 
+                // 对于非 '#' 开头的链接 (例如外部链接), 不调用 e.preventDefault(), 
+                // 允许浏览器执行默认的跳转行为 (在新标签页打开, 因为有 target="_blank")
             });
         });
 
-        // 更新侧边栏链接的 active 状态
+        // 更新侧边栏链接的 active 状态 (只处理页内链接)
         function updateActiveLink(activeId) {
             document.querySelectorAll('.sidebar nav a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${activeId}`) {
-                    link.classList.add('active');
+                const linkHref = link.getAttribute('href');
+                if (linkHref && linkHref.startsWith('#')) { // 确保只操作页内链接
+                    link.classList.remove('active');
+                    if (linkHref === `#${activeId}`) {
+                        link.classList.add('active');
+                    }
                 }
             });
         }
