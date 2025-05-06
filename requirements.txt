@@ -1,0 +1,25 @@
+# Web Framework & Server
+Flask>=2.0.0
+gunicorn>=20.0.0       # WSGI server for production (recommended)
+
+# Database & Cache Clients
+redis>=4.0.0           # Python client for Redis
+mysql-connector-python>=8.0.0 # For MySQL connection (or use PyMySQL)
+
+# Machine Learning & Deep Learning
+torch>=1.10.0          # PyTorch core
+torchvision>=0.11.0    # Datasets, transforms, and models for computer vision (often used with PyTorch)
+torchaudio>=0.10.0     # Datasets, transforms, and models for audio (often used with PyTorch)
+scikit-learn>=1.0.0    # For ML algorithms and evaluation
+
+# Data Handling & Analysis
+numpy>=1.20.0
+pandas>=1.3.0
+
+# Audio & Video Processing
+librosa>=0.9.0         # For audio feature extraction
+opencv-python>=4.5.0   # OpenCV for image/video processing (use opencv-python-headless if GUI is not needed)
+
+# Note: Dependencies like FFmpeg, Apache Flink, Node.js, Nginx, Supervisor, CUDA Toolkit,
+# Conda/venv, Docker, etc., are system-level or toolchain dependencies and
+# need to be installed/configured separately, not via pip from this file. 

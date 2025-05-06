@@ -1,0 +1,841 @@
+/* 地图页面样式 */
+#map-container {
+    width: 100%;
+    height: 100vh; /* 修改为100vh，占满整个视口高度 */
+    position: relative;
+    border: none; /* 移除边框 */
+}
+
+.event-legend {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red { background-color: #ff3b30; }
+.orange { background-color: #ff9500; }
+.yellow { background-color: #ffcc00; }
+.blue { background-color: #007aff; }
+.green { background-color: #4cd964; }
+
+.event-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.event-panel h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.event-item {
+    padding: 10px;
+    border-left: 4px solid #ccc;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.event-item:hover {
+    background-color: #f0f0f0;
+}
+
+.event-item.red { border-left-color: #ff3b30; }
+.event-item.orange { border-left-color: #ff9500; }
+.event-item.yellow { border-left-color: #ffcc00; }
+.event-item.blue { border-left-color: #007aff; }
+.event-item.green { border-left-color: #4cd964; }
+
+.event-item .time {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-item .type {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-item .description {
+    color: #555;
+}
+
+/* 自定义标记样式 */
+.custom-marker {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.marker-core {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 9px;
+    left: 9px;
+    z-index: 102;
+}
+
+.marker-core.red { background-color: #ff3b30; }
+.marker-core.orange { background-color: #ff9500; }
+.marker-core.yellow { background-color: #ffcc00; }
+.marker-core.blue { background-color: #007aff; }
+.marker-core.green { background-color: #4cd964; }
+
+.pulse {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+    animation: pulse 1.5s infinite;
+    z-index: 101;
+}
+
+.pulse.red { 
+    background-color: rgba(255, 59, 48, 0.6);
+    animation-duration: 1s;
+}
+.pulse.orange { 
+    background-color: rgba(255, 149, 0, 0.6);
+    animation-duration: 1.5s;
+}
+.pulse.yellow { 
+    background-color: rgba(255, 204, 0, 0.6);
+    animation-duration: 2s;
+}
+.pulse.blue { 
+    background-color: rgba(0, 122, 255, 0.6);
+    animation-duration: 2.5s;
+}
+.pulse.green { 
+    background-color: rgba(76, 217, 100, 0.6);
+    animation-duration: 3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1.4);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* 信息窗口样式 */
+.info-window {
+    padding: 10px;
+    max-width: 250px;
+}
+
+.info-window h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.info-window p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* 历史地图页面样式 */
+#history-map-container {
+    width: 100% !important;
+    height: 100vh !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 5;
+    background-color: #f5f5f5;
+}
+
+/* 修改日期选择器样式为日历形式 */
+.date-selector-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    width: 280px;
+}
+
+.date-selector-panel h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 日历样式 */
+.calendar {
+    width: 100%;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.day-header {
+    font-weight: bold;
+    color: #666;
+}
+
+/* 统一可点击日期样式（包括1-4日和4月份日期） */
+.day-selectable, .day-clickable, .disabled {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333; /* 统一文字颜色 */
+}
+
+.day-selectable:hover, .day-clickable:hover, .disabled:hover {
+    background-color: #e0e0e0;
+}
+
+/* 选中状态仅应用于当前选中日期 */
+.day-selectable.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* 5日后仍然显示为不可点击 */
+.day-disabled {
+    color: #ccc;
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+/* 确保右侧面板样式与实时地图一致 */
+.right-panel {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 320px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.panel-section {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.panel-section h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 事件统计样式 */
+.event-summary-container {
+    padding: 10px;
+}
+
+.event-summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.total-count {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.total-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.event-types {
+    padding: 0 10px;
+}
+
+.event-type-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px; /* 统一字体大小 */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0; /* 防止点被压缩 */
+}
+
+/* 确保颜色定义存在 */
+.dot.red { background-color: #ff3b30; }
+.dot.orange { background-color: #ff9500; }
+.dot.yellow { background-color: #ffcc00; }
+.dot.blue { background-color: #007aff; }
+.dot.green { background-color: #4cd964; }
+
+.type-name {
+    flex: 1; /* 占据剩余空间 */
+    margin-right: 10px; /* 与数量保持间距 */
+    white-space: nowrap; /* 防止文字换行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 超出显示省略号 */
+}
+
+.type-count {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 20px; /* 给数量留出基本空间 */
+    text-align: right;
+}
+
+.type-percent {
+    color: #666;
+    min-width: 35px; /* 给百分比留出空间 */
+    text-align: right;
+}
+
+/* 区域安全指数样式 */
+#safety-index .safety-grid,
+#history-safety-index .safety-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 添加列和行之间的间距 */
+}
+
+#safety-index .safety-item,
+#history-safety-index .safety-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中内容 */
+    /* 修改宽度以适应两列布局 */
+    width: calc(50% - 5px); /* 50% 减去一半的 gap */
+    padding: 8px 12px; /* 调整内边距 */
+    margin-bottom: 0; /* 移除下边距，使用gap代替 */
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* 保持原有的背景和边框样式 */
+}
+
+/* 确保 level 样式仍然生效 */
+.level-1 { background-color: rgba(76, 217, 100, 0.2); border-left: 3px solid #4cd964; }
+.level-2 { background-color: rgba(76, 217, 100, 0.1); border-left: 3px solid #8cda76; }
+.level-3 { background-color: rgba(255, 204, 0, 0.1); border-left: 3px solid #ffcc00; }
+.level-4 { background-color: rgba(255, 149, 0, 0.1); border-left: 3px solid #ff9500; }
+.level-5 { background-color: rgba(255, 59, 48, 0.1); border-left: 3px solid #ff3b30; }
+
+
+#safety-index .safety-item:hover,
+#history-safety-index .safety-item:hover {
+    opacity: 0.8;
+}
+
+#safety-index .safety-value,
+#history-safety-index .safety-value {
+    font-weight: bold;
+    white-space: nowrap; /* 防止文字换行 */
+    margin-left: 5px; /* 与区名保持一点距离 */
+}
+
+/* 区域多边形样式 */
+.district-polygon {
+    cursor: pointer;
+    transition: fillOpacity 0.3s;
+}
+
+.district-polygon:hover {
+    fillOpacity: 0.5 !important;
+}
+
+/* 区域名称标签样式 */
+.district-label {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.district-label:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 事件预警图表的额外样式 */
+.chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.chart-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 7 - 5px); /* 对于7天数据 */
+    cursor: pointer;
+}
+
+.stacked-bar {
+    width: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* 从底部开始堆叠 */
+    height: 150px;
+    justify-content: flex-start;
+}
+
+.bar-segment {
+    width: 100%;
+}
+
+.bar-label {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.chart-legend .legend-item {
+    margin: 0 8px;
+    font-size: 12px;
+}
+
+.bar-legend {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+/* 全局提醒样式 */
+.global-alert {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.alert-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff3b30;
+    margin-right: 10px;
+    animation: pulse 1s infinite;
+}
+
+.alert-message {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 59, 48, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* 事件详情模态窗口样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #777;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.modal-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.event-time {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.modal-body {
+    padding: 20px 25px;
+    display: flex;
+    gap: 30px;
+}
+
+.detail-left, .detail-right {
+    flex: 1;
+}
+
+.detail-left h3, .detail-right h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+/* 概率图表样式 */
+.prob-chart {
+    height: 180px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.prob-bar {
+    height: 25px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.prob-label {
+    width: 120px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.prob-value-container {
+    flex: 1;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.prob-value {
+    height: 100%;
+    color: white;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: width 0.6s ease-out;
+}
+
+.prob-red { background-color: #ff3b30; }
+.prob-orange { background-color: #ff9500; }
+.prob-yellow { background-color: #ffcc00; color: #333; }
+.prob-blue { background-color: #007aff; }
+.prob-green { background-color: #4cd964; }
+
+/* 事件信息样式 */
+.event-info {
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    width: 80px;
+    color: #777;
+}
+
+.info-value {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.event-description {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.event-description h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.event-description p {
+    margin: 0;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* 视频区域样式 */
+.video-container {
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #222;
+}
+
+.loading-indicator {
+    text-align: center;
+}
+
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    color: #ccc;
+    font-size: 14px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 音频波形样式 */
+.audio-wave-container {
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.audio-wave-container h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.audio-wave {
+    height: 60px;
+    background-color: #222;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wave-bar {
+    position: absolute;
+    bottom: 0;
+    width: 3px;
+    margin: 0 2px;
+    background-color: #ff9500;
+    animation: waveAnimation 1.2s infinite ease-in-out;
+}
+
+@keyframes waveAnimation {
+    0%, 100% { height: 10%; }
+    50% { height: 80%; }
+}
+
+/* 添加以下CSS修复可能的闪烁问题 */
+#history-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.1s;
+}
+
+#history-map-container {
+    width: 100% !important;
+    height: 100vh !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 5;
+    background-color: #f5f5f5;
+}
+
+.page {
+    transition: none !important; /* 禁用过渡效果，减少闪烁 */
+}
+
+/* 确保页面切换时的平滑过渡 */
+.page.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.page:not(.active) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}

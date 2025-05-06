@@ -1,0 +1,218 @@
+/* 监控系统页面样式 */
+.monitoring-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* 视频播放区域样式 */
+.video-player-area {
+    flex: 7;
+    background: #1a1a1a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 150px);
+    background: #000;
+    position: relative;
+}
+
+.video-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.no-video-message {
+    color: #999;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* 监控列表区域样式 */
+.camera-list-area {
+    flex: 3;
+    background: #292929;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+    color: #fff;
+}
+
+.camera-list-header {
+    color: #fff;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+/* 预设相机样式 */
+.preset-camera {
+    background: #333;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-left: 4px solid #0066cc;
+}
+
+.camera-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M18 4V1h-2v3H8V1H6v3H2v18h20V4h-4zm-5 10H7v-5h6v5zm5-2h-3v-2h3v2zm0 5h-3v-2h3v2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.camera-details {
+    flex: 1;
+}
+
+.camera-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.camera-location {
+    font-size: 0.8em;
+    color: #ccc;
+}
+
+.camera-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.status-online {
+    background: #00cc66;
+}
+
+.status-offline {
+    background: #cc0000;
+}
+
+/* 新增：相机操作区样式 */
+.camera-actions {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.action-button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.action-button:hover {
+    background: #0055aa;
+}
+
+/* 新增：相机选择器样式 */
+.camera-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.selector-button {
+    background: #444;
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.selector-button:hover {
+    background: #555;
+}
+
+.selector-button.active {
+    background: #333;
+    color: #fff;
+    border-left: 3px solid #0066cc;
+}
+
+/* 新增：相机信息区样式 */
+.camera-info {
+    background: #333;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.camera-info h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #ddd;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    width: 100px;
+    color: #aaa;
+}
+
+.info-value {
+    color: #fff;
+}
+
+/* 控制按钮区域 */
+.video-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.control-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    color: #0099ff;
+} 
