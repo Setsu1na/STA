@@ -1,0 +1,2 @@
+6.5200000000000005	10.0	Blender
+6.46	10.0	Vacuum_cleaner

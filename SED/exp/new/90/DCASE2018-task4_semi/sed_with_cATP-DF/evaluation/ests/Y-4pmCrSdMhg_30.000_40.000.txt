@@ -1,0 +1,2 @@
+0.0	4.32	Alarm_bell_ringing
+4.76	9.06	Alarm_bell_ringing

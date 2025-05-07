@@ -1,0 +1,9 @@
+0.0	2.58	Dishes
+2.68	3.44	Dishes
+3.52	5.32	Dishes
+5.62	5.76	Dishes
+5.84	6.0200000000000005	Dishes
+6.42	6.62	Dishes
+7.96	8.98	Dishes
+0.0	5.0200000000000005	gunfire
+0.0	5.3	glass

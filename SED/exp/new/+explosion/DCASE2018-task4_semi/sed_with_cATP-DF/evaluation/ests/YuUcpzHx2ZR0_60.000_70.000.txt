@@ -1,0 +1,9 @@
+0.0	1.6	Dishes
+1.76	1.94	Dishes
+2.3000000000000003	2.48	Dishes
+2.56	4.62	Dishes
+4.88	5.5600000000000005	Dishes
+5.98	6.62	Dishes
+6.7	7.5200000000000005	Dishes
+9.96	10.0	Dishes
+0.0	7.68	Running_water

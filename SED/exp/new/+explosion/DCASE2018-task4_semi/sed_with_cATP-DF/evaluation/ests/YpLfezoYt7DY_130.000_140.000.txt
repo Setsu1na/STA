@@ -1,0 +1,4 @@
+0.0	2.84	crying
+4.78	10.0	crying
+0.0	2.4	screaming
+4.96	10.0	screaming

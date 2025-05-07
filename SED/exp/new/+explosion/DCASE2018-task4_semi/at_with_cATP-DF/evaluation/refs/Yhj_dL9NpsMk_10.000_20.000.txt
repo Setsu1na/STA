@@ -1,0 +1,2 @@
+1.8090000000000002	7.0710000000000015	Electric_shaver_toothbrush
+7.482	9.629	Electric_shaver_toothbrush

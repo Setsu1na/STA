@@ -1,0 +1,4 @@
+0.0	10.0	Electric_shaver_toothbrush
+0.0	2.1	Frying
+4.86	10.0	Frying
+0.0	10.0	Speech

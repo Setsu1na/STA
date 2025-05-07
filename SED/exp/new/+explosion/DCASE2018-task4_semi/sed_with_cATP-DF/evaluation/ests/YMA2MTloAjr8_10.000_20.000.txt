@@ -1,0 +1,10 @@
+0.58	1.16	Alarm_bell_ringing
+1.58	2.18	Alarm_bell_ringing
+2.58	3.18	Alarm_bell_ringing
+3.58	4.18	Alarm_bell_ringing
+4.58	5.18	Alarm_bell_ringing
+5.58	6.2	Alarm_bell_ringing
+6.58	7.16	Alarm_bell_ringing
+7.58	8.16	Alarm_bell_ringing
+8.58	9.18	Alarm_bell_ringing
+0.84	8.28	glass

@@ -1,0 +1,2 @@
+[ result audio tagging vali f1 : 0.517934, precision : 0.657852, recall : 0.469932 ]
+[ result audio tagging test f1 : 0.480993, precision : 0.669360, recall : 0.407020 ]

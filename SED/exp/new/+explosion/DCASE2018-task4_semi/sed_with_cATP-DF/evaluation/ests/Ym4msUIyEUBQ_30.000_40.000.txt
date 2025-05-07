@@ -1,0 +1,8 @@
+0.0	2.32	Cat
+5.22	8.64	Cat
+8.98	9.14	Cat
+9.32	10.0	Cat
+0.0	2.02	crying
+6.38	9.92	crying
+0.0	2.04	screaming
+6.2	10.0	screaming

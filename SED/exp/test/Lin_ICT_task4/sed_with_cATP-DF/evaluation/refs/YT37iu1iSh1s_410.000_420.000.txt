@@ -1,0 +1,7 @@
+0.0	3.468	Speech
+0.066	0.316	Dishes
+1.396	3.2889999999999997	Running_water
+3.5410000000000004	4.646	Blender
+3.759	6.995	Speech
+7.379	8.915	Running_water
+8.537	9.993	Speech

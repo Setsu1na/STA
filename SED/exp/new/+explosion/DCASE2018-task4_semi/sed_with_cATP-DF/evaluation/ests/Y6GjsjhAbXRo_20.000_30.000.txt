@@ -1,0 +1,7 @@
+0.54	7.76	Alarm_bell_ringing
+9.08	10.0	Alarm_bell_ringing
+0.5	1.5	Dog
+1.72	4.84	Dog
+7.68	7.88	Dog
+9.02	9.5	Dog
+9.82	10.0	Dog

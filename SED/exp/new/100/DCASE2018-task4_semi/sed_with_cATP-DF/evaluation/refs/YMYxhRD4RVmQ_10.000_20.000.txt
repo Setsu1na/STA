@@ -1,0 +1,2 @@
+0.0	10.0	Vacuum_cleaner
+9.045	9.775	Speech

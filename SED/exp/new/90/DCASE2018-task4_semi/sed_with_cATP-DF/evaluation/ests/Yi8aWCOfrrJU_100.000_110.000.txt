@@ -1,0 +1,6 @@
+0.0	0.18	Dishes
+0.32	0.72	Dishes
+2.42	2.6	Dishes
+2.88	3.08	Dishes
+5.16	5.38	Dishes
+9.200000000000001	9.6	Dishes

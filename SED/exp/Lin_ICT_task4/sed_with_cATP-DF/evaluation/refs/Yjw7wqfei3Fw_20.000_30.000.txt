@@ -1,0 +1,2 @@
+0.0	1.716	Speech
+0.0	1.597	Vacuum_cleaner

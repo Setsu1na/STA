@@ -1,0 +1,2 @@
+1.22	6.9	Running_water
+9.3	10.0	Running_water

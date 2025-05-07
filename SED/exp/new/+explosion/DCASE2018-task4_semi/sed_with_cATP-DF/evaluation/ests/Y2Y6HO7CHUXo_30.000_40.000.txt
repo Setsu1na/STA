@@ -1,0 +1,6 @@
+0.0	2.34	gunfire
+5.88	10.0	gunfire
+0.0	2.62	fireworks
+5.6000000000000005	10.0	fireworks
+0.0	2.52	explosion
+5.7	10.0	explosion

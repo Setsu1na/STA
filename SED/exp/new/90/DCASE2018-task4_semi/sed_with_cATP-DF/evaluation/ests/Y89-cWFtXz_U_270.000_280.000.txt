@@ -1,0 +1,4 @@
+0.0	10.0	Alarm_bell_ringing
+0.0	1.18	Dog
+1.48	4.32	Dog
+4.54	10.0	Dog

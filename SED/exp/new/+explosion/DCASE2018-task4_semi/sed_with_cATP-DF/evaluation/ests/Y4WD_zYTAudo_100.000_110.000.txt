@@ -1,0 +1,2 @@
+0.74	9.86	Alarm_bell_ringing
+1.2	10.0	crying

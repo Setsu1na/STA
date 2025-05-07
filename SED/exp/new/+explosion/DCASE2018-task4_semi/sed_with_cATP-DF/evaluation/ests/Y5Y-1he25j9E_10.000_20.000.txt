@@ -1,0 +1,3 @@
+0.0	0.7000000000000001	Running_water
+1.68	5.7	Running_water
+7.16	10.0	Running_water

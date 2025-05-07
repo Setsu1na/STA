@@ -1,0 +1,4 @@
+0.24	3.38	Alarm_bell_ringing
+6.640000000000001	8.36	Alarm_bell_ringing
+9.8	10.0	Alarm_bell_ringing
+0.0	2.46	crying

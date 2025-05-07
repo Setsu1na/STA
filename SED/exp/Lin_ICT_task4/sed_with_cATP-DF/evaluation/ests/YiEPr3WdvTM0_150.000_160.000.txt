@@ -1,0 +1,2 @@
+2.5	2.94	Alarm_bell_ringing
+5.0600000000000005	7.5200000000000005	Alarm_bell_ringing

@@ -1,0 +1,3 @@
+0.0	3.86	Alarm_bell_ringing
+4.46	8.8	Alarm_bell_ringing
+0.0	9.0	glass

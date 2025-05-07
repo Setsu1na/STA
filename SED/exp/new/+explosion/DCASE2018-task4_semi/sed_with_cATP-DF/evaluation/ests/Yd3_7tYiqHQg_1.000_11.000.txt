@@ -1,0 +1,5 @@
+1.2	1.46	Alarm_bell_ringing
+2.04	2.32	Alarm_bell_ringing
+2.84	3.1	Alarm_bell_ringing
+3.48	6.84	Alarm_bell_ringing
+6.86	10.0	explosion

@@ -1,0 +1,4 @@
+0.0	2.12	Alarm_bell_ringing
+2.4	5.76	Alarm_bell_ringing
+6.42	10.0	Alarm_bell_ringing
+0.0	10.0	Speech

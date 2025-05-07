@@ -1,0 +1,238 @@
+Segment based metrics
+========================================
+  Evaluated length                  : 4712.28 sec
+  Evaluated files                   : 491 
+  Segment length                    : 1.00 sec
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 50.71 %
+    Precision                       : 60.91 %
+    Recall                          : 43.44 %
+  Error rate
+    Error rate (ER)                 : 0.66 
+    Substitution rate               : 0.19 
+    Deletion rate                   : 0.38 
+    Insertion rate                  : 0.09 
+  Accuracy
+    Sensitivity                     : 43.44 %
+    Specificity                     : 98.24 %
+    Balanced accuracy               : 70.84 %
+    Accuracy                        : 94.98 %
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 51.29 %
+    Precision                       : 67.71 %
+    Recall                          : 44.52 %
+  Error rate
+    Error rate (ER)                 : 0.81 
+    Deletion rate                   : 0.55 
+    Insertion rate                  : 0.25 
+  Accuracy
+    Sensitivity                     : 44.52 %
+    Specificity                     : 98.20 %
+    Balanced accuracy               : 71.36 %
+    Accuracy                        : 94.98 %
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    | Sens     Spec     Bacc     Acc     
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ | ------   ------   ------   ------  
+    Alarm_bell.. | 220     185   | 74.6%    81.6%    68.6%  | 0.47     0.31     0.15   | 68.6%    99.2%    83.9%    97.8%   
+    Blender      | 213     68    | 19.9%    41.2%    13.1%  | 1.06     0.87     0.19   | 13.1%    99.1%    56.1%    95.3%   
+    Cat          | 159     130   | 72.0%    80.0%    65.4%  | 0.51     0.35     0.16   | 65.4%    99.4%    82.4%    98.3%   
+    Dishes       | 135     132   | 53.2%    53.8%    52.6%  | 0.93     0.47     0.45   | 52.6%    98.7%    75.6%    97.4%   
+    Dog          | 197     205   | 57.7%    56.6%    58.9%  | 0.86     0.41     0.45   | 58.9%    98.0%    78.5%    96.4%   
+    Electric_s.. | 179     152   | 83.4%    90.8%    77.1%  | 0.31     0.23     0.08   | 77.1%    99.7%    88.4%    98.8%   
+    Frying       | 217     186   | 61.0%    66.1%    56.7%  | 0.72     0.43     0.29   | 56.7%    98.6%    77.6%    96.7%   
+    Running_wa.. | 395     358   | 66.9%    70.4%    63.8%  | 0.63     0.36     0.27   | 63.8%    97.6%    80.7%    94.8%   
+    Speech       | 509     930   | 50.3%    38.9%    71.1%  | 1.40     0.29     1.12   | 71.1%    86.6%    78.9%    84.9%   
+    Vacuum_cle.. | 318     335   | 77.5%    75.5%    79.6%  | 0.46     0.20     0.26   | 79.6%    98.1%    88.9%    96.9%   
+    car          | 390     206   | 50.7%    73.3%    38.7%  | 0.75     0.61     0.14   | 38.7%    98.7%    68.7%    93.8%   
+    crying       | 370     96    | 32.6%    79.2%    20.5%  | 0.85     0.79     0.05   | 20.5%    99.5%    60.0%    93.4%   
+    fire         | 350     20    | 10.8%    100.0%   5.7%   | 0.94     0.94     0.00   | 5.7%     100.0%   52.9%    93.1%   
+    fireworks    | 280     130   | 40.0%    63.1%    29.3%  | 0.88     0.71     0.17   | 29.3%    98.9%    64.1%    94.8%   
+    glass        | 290     0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     100.0%   50.0%    93.9%   
+    gunfire      | 280     216   | 45.6%    52.3%    40.4%  | 0.96     0.60     0.37   | 40.4%    97.7%    69.0%    94.3%   
+    screaming    | 300     76    | 24.5%    60.5%    15.3%  | 0.95     0.85     0.10   | 15.3%    99.3%    57.3%    94.0%   
+
+
+Event based metrics (onset-offset)
+========================================
+  Evaluated length                  : 4662.60 sec
+  Evaluated files                   : 491 
+  Evaluate onset                    : True 
+  Evaluate offset                   : True 
+  T collar                          : 200.00 ms
+  Offset (length)                   : 20.00 %
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 26.62 %
+    Precision                       : 32.66 %
+    Recall                          : 22.46 %
+  Error rate
+    Error rate (ER)                 : 1.15 
+    Substitution rate               : 0.09 
+    Deletion rate                   : 0.69 
+    Insertion rate                  : 0.38 
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 27.78 %
+    Precision                       : 39.63 %
+    Recall                          : 25.03 %
+  Error rate
+    Error rate (ER)                 : 1.17 
+    Deletion rate                   : 0.75 
+    Insertion rate                  : 0.42 
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    |
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ |
+    Alarm_bell.. | 107     48    | 33.5%    54.2%    24.3%  | 0.96     0.76     0.21   |
+    Blender      | 38      8     | 17.4%    50.0%    10.5%  | 1.00     0.89     0.11   |
+    Cat          | 93      92    | 59.5%    59.8%    59.1%  | 0.81     0.41     0.40   |
+    Dishes       | 113     140   | 24.5%    22.1%    27.4%  | 1.69     0.73     0.96   |
+    Dog          | 120     131   | 24.7%    23.7%    25.8%  | 1.58     0.74     0.83   |
+    Electric_s.. | 22      19    | 58.5%    63.2%    54.5%  | 0.77     0.45     0.32   |
+    Frying       | 23      33    | 14.3%    12.1%    17.4%  | 2.09     0.83     1.26   |
+    Running_wa.. | 66      46    | 33.9%    41.3%    28.8%  | 1.12     0.71     0.41   |
+    Speech       | 238     93    | 0.0%     0.0%     0.0%   | 1.39     1.00     0.39   |
+    Vacuum_cle.. | 36      36    | 72.2%    72.2%    72.2%  | 0.56     0.28     0.28   |
+    car          | 39      23    | 45.2%    60.9%    35.9%  | 0.87     0.64     0.23   |
+    crying       | 37      14    | 15.7%    28.6%    10.8%  | 1.16     0.89     0.27   |
+    fire         | 35      2     | 10.8%    100.0%   5.7%   | 0.94     0.94     0.00   |
+    fireworks    | 28      16    | 27.3%    37.5%    21.4%  | 1.14     0.79     0.36   |
+    glass        | 29      0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+    gunfire      | 28      33    | 19.7%    18.2%    21.4%  | 1.75     0.79     0.96   |
+    screaming    | 30      10    | 15.0%    30.0%    10.0%  | 1.13     0.90     0.23   |
+
+
+Segment based metrics
+========================================
+  Evaluated length                  : 11264.08 sec
+  Evaluated files                   : 1182 
+  Segment length                    : 1.00 sec
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 48.68 %
+    Precision                       : 59.98 %
+    Recall                          : 40.96 %
+  Error rate
+    Error rate (ER)                 : 0.71 
+    Substitution rate               : 0.16 
+    Deletion rate                   : 0.43 
+    Insertion rate                  : 0.12 
+  Accuracy
+    Sensitivity                     : 40.96 %
+    Specificity                     : 98.21 %
+    Balanced accuracy               : 69.59 %
+    Accuracy                        : 94.70 %
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 45.87 %
+    Precision                       : 63.71 %
+    Recall                          : 37.44 %
+  Error rate
+    Error rate (ER)                 : 0.86 
+    Deletion rate                   : 0.63 
+    Insertion rate                  : 0.24 
+  Accuracy
+    Sensitivity                     : 37.44 %
+    Specificity                     : 98.05 %
+    Balanced accuracy               : 67.75 %
+    Accuracy                        : 94.70 %
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    | Sens     Spec     Bacc     Acc     
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ | ------   ------   ------   ------  
+    Alarm_bell.. | 675     417   | 58.6%    76.7%    47.4%  | 0.67     0.53     0.14   | 47.4%    99.1%    73.2%    96.0%   
+    Blender      | 255     105   | 46.7%    80.0%    32.9%  | 0.75     0.67     0.08   | 32.9%    99.8%    66.4%    98.3%   
+    Cat          | 488     271   | 42.7%    59.8%    33.2%  | 0.89     0.67     0.22   | 33.2%    99.0%    66.1%    96.2%   
+    Dishes       | 547     515   | 36.0%    37.1%    34.9%  | 1.24     0.65     0.59   | 34.9%    97.0%    66.0%    94.0%   
+    Dog          | 837     484   | 47.2%    64.5%    37.3%  | 0.83     0.63     0.21   | 37.3%    98.4%    67.8%    93.9%   
+    Electric_s.. | 270     278   | 67.5%    66.5%    68.5%  | 0.66     0.31     0.34   | 68.5%    99.2%    83.8%    98.4%   
+    Frying       | 503     448   | 54.3%    57.6%    51.3%  | 0.86     0.49     0.38   | 51.3%    98.3%    74.8%    96.2%   
+    Running_wa.. | 751     299   | 45.0%    78.9%    31.4%  | 0.77     0.69     0.08   | 31.4%    99.4%    65.4%    94.9%   
+    Speech       | 2687    3130  | 61.1%    56.7%    66.1%  | 0.84     0.34     0.50   | 66.1%    84.4%    75.2%    80.1%   
+    Vacuum_cle.. | 410     425   | 62.5%    61.4%    63.7%  | 0.76     0.36     0.40   | 63.7%    98.5%    81.1%    97.2%   
+    car          | 670     416   | 48.6%    63.5%    39.4%  | 0.83     0.61     0.23   | 39.4%    98.6%    69.0%    95.1%   
+    crying       | 610     299   | 35.0%    53.2%    26.1%  | 0.97     0.74     0.23   | 26.1%    98.7%    62.4%    94.8%   
+    fire         | 630     30    | 6.1%     66.7%    3.2%   | 0.98     0.97     0.02   | 3.2%     99.9%    51.5%    94.5%   
+    fireworks    | 620     351   | 63.6%    88.0%    49.8%  | 0.57     0.50     0.07   | 49.8%    99.6%    74.7%    96.9%   
+    glass        | 660     0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     100.0%   50.0%    94.2%   
+    gunfire      | 620     556   | 46.9%    49.6%    44.5%  | 1.01     0.55     0.45   | 44.5%    97.4%    71.0%    94.5%   
+    screaming    | 620     71    | 12.2%    59.2%    6.8%   | 0.98     0.93     0.05   | 6.8%     99.7%    53.3%    94.7%   
+
+
+Event based metrics (onset-offset)
+========================================
+  Evaluated length                  : 11042.57 sec
+  Evaluated files                   : 1182 
+  Evaluate onset                    : True 
+  Evaluate offset                   : True 
+  T collar                          : 200.00 ms
+  Offset (length)                   : 20.00 %
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 17.03 %
+    Precision                       : 24.22 %
+    Recall                          : 13.14 %
+  Error rate
+    Error rate (ER)                 : 1.22 
+    Substitution rate               : 0.06 
+    Deletion rate                   : 0.81 
+    Insertion rate                  : 0.35 
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 25.96 %
+    Precision                       : 36.88 %
+    Recall                          : 22.76 %
+  Error rate
+    Error rate (ER)                 : 1.17 
+    Deletion rate                   : 0.77 
+    Insertion rate                  : 0.40 
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    |
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ |
+    Alarm_bell.. | 241     139   | 43.2%    59.0%    34.0%  | 0.90     0.66     0.24   |
+    Blender      | 44      16    | 30.0%    56.2%    20.5%  | 0.95     0.80     0.16   |
+    Cat          | 220     171   | 30.2%    34.5%    26.8%  | 1.24     0.73     0.51   |
+    Dishes       | 401     460   | 13.9%    13.0%    15.0%  | 1.85     0.85     1.00   |
+    Dog          | 409     275   | 18.1%    22.5%    15.2%  | 1.37     0.85     0.52   |
+    Electric_s.. | 32      31    | 57.1%    58.1%    56.2%  | 0.84     0.44     0.41   |
+    Frying       | 63      64    | 29.9%    29.7%    30.2%  | 1.41     0.70     0.71   |
+    Running_wa.. | 134     43    | 24.9%    51.2%    16.4%  | 0.99     0.84     0.16   |
+    Speech       | 1253    313   | 0.0%     0.0%     0.0%   | 1.25     1.00     0.25   |
+    Vacuum_cle.. | 48      46    | 53.2%    54.3%    52.1%  | 0.92     0.48     0.44   |
+    car          | 67      52    | 31.9%    36.5%    28.4%  | 1.21     0.72     0.49   |
+    crying       | 61      40    | 23.8%    30.0%    19.7%  | 1.26     0.80     0.46   |
+    fire         | 63      3     | 6.1%     66.7%    3.2%   | 0.98     0.97     0.02   |
+    fireworks    | 62      41    | 52.4%    65.9%    43.5%  | 0.79     0.56     0.23   |
+    glass        | 66      0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+    gunfire      | 62      81    | 18.2%    16.0%    21.0%  | 1.89     0.79     1.10   |
+    screaming    | 62      9     | 8.5%     33.3%    4.8%   | 1.05     0.95     0.10   |
+
+

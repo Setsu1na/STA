@@ -1,0 +1,2 @@
+0.0	2.92	explosion
+7.36	10.0	explosion

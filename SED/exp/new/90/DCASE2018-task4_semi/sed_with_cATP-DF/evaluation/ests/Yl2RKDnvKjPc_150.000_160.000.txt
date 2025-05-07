@@ -1,0 +1,3 @@
+0.0	3.38	Frying
+9.02	10.0	Frying
+0.0	10.0	Speech

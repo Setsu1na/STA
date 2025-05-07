@@ -1,0 +1,2 @@
+0.0	10.0	fire
+0.84	10.0	explosion

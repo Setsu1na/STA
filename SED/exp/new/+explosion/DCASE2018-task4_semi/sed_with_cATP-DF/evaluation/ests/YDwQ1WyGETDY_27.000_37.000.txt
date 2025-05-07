@@ -1,0 +1,2 @@
+0.0	8.06	Alarm_bell_ringing
+0.0	7.92	screaming

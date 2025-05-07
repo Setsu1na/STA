@@ -1,0 +1,9 @@
+0.36	1.057	Alarm_bell_ringing
+1.416	2.148	Alarm_bell_ringing
+2.45	3.111	Alarm_bell_ringing
+3.4130000000000003	4.377	Alarm_bell_ringing
+4.609	5.433	Alarm_bell_ringing
+5.584	6.385	Alarm_bell_ringing
+6.617999999999999	7.43	Alarm_bell_ringing
+7.662999999999999	8.336	Alarm_bell_ringing
+8.649	10.0	Alarm_bell_ringing

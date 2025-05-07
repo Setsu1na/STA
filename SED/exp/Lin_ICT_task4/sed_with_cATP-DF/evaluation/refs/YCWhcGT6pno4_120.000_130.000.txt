@@ -1,0 +1,4 @@
+0.0	3.611	Speech
+3.971	7.558	Blender
+7.814	9.067	Speech
+9.543	10.0	Speech

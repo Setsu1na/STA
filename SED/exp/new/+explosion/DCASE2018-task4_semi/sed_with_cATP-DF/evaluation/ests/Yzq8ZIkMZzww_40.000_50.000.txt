@@ -1,0 +1,2 @@
+0.0	8.14	gunfire
+0.0	7.84	explosion

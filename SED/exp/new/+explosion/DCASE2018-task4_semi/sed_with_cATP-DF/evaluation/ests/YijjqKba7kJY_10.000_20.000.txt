@@ -1,0 +1,2 @@
+1.36	8.78	gunfire
+0.0	10.0	fireworks

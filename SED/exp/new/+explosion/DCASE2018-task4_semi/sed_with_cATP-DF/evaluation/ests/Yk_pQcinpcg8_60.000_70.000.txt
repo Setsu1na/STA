@@ -1,0 +1,4 @@
+0.0	2.72	fireworks
+5.26	10.0	fireworks
+0.0	2.54	explosion
+4.94	10.0	explosion

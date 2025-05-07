@@ -1,0 +1,178 @@
+Segment based metrics
+========================================
+  Evaluated length                  : 10.00 sec
+  Evaluated files                   : 1 
+  Segment length                    : 1.00 sec
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : nan %
+    Precision                       : nan %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Substitution rate               : 0.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  Accuracy
+    Sensitivity                     : 0.00 %
+    Specificity                     : 100.00 %
+    Balanced accuracy               : 50.00 %
+    Accuracy                        : 45.00 %
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : nan %
+    Precision                       : nan %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  Accuracy
+    Sensitivity                     : 0.00 %
+    Specificity                     : 50.00 %
+    Balanced accuracy               : 25.00 %
+    Accuracy                        : 45.00 %
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    | Sens     Spec     Bacc     Acc     
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ | ------   ------   ------   ------  
+    Blender      | 10      0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     0.0%     0.0%     0.0%    
+    Speech       | 1       0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     100.0%   50.0%    90.0%   
+
+
+Event based metrics (onset-offset)
+========================================
+  Evaluated length                  : 10.00 sec
+  Evaluated files                   : 1 
+  Evaluate onset                    : True 
+  Evaluate offset                   : True 
+  T collar                          : 200.00 ms
+  Offset (length)                   : 20.00 %
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 0.00 %
+    Precision                       : 0.00 %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Substitution rate               : 0.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 0.00 %
+    Precision                       : 0.00 %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    |
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ |
+    Blender      | 1       0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+    Speech       | 1       0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+
+
+Segment based metrics
+========================================
+  Evaluated length                  : 10.00 sec
+  Evaluated files                   : 1 
+  Segment length                    : 1.00 sec
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : nan %
+    Precision                       : nan %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Substitution rate               : 0.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  Accuracy
+    Sensitivity                     : 0.00 %
+    Specificity                     : 100.00 %
+    Balanced accuracy               : 50.00 %
+    Accuracy                        : 45.00 %
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : nan %
+    Precision                       : nan %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  Accuracy
+    Sensitivity                     : 0.00 %
+    Specificity                     : 50.00 %
+    Balanced accuracy               : 25.00 %
+    Accuracy                        : 45.00 %
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    | Sens     Spec     Bacc     Acc     
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ | ------   ------   ------   ------  
+    Blender      | 10      0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     0.0%     0.0%     0.0%    
+    Speech       | 1       0     | nan%     nan%     0.0%   | 1.00     1.00     0.00   | 0.0%     100.0%   50.0%    90.0%   
+
+
+Event based metrics (onset-offset)
+========================================
+  Evaluated length                  : 10.00 sec
+  Evaluated files                   : 1 
+  Evaluate onset                    : True 
+  Evaluate offset                   : True 
+  T collar                          : 200.00 ms
+  Offset (length)                   : 20.00 %
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 0.00 %
+    Precision                       : 0.00 %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Substitution rate               : 0.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 0.00 %
+    Precision                       : 0.00 %
+    Recall                          : 0.00 %
+  Error rate
+    Error rate (ER)                 : 1.00 
+    Deletion rate                   : 1.00 
+    Insertion rate                  : 0.00 
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    |
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ |
+    Blender      | 1       0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+    Speech       | 1       0     | 0.0%     0.0%     0.0%   | 1.00     1.00     0.00   |
+
+

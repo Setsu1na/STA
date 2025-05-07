@@ -1,0 +1,7 @@
+0.48	2.08	Alarm_bell_ringing
+2.7	3.62	Alarm_bell_ringing
+4.0200000000000005	8.88	Alarm_bell_ringing
+0.48	2.42	Cat
+2.72	3.8200000000000003	Cat
+4.04	5.54	Cat
+5.68	9.02	Cat

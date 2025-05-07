@@ -1,0 +1,2 @@
+0.0	5.18	Alarm_bell_ringing
+0.0	5.68	glass

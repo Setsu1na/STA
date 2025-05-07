@@ -1,0 +1,15 @@
+1.44	1.74	Dishes
+2.0	2.52	Dishes
+2.86	3.22	Dishes
+3.34	3.5	Dishes
+4.64	4.96	Dishes
+5.5	5.76	Dishes
+6.36	6.7	Dishes
+6.88	7.640000000000001	Dishes
+7.72	8.0	Dishes
+8.1	8.24	Dishes
+8.32	8.52	Dishes
+8.64	9.3	Dishes
+9.68	10.0	Dishes
+0.0	10.0	Frying
+0.0	10.0	car

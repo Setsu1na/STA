@@ -1,0 +1,6 @@
+0.0	1.1400000000000001	Dishes
+1.48	2.86	Dishes
+3.34	3.64	Dishes
+8.66	10.0	Dishes
+0.0	1.36	gunfire
+0.0	2.06	glass

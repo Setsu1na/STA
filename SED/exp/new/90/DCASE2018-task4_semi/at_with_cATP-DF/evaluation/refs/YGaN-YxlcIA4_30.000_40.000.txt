@@ -1,0 +1,4 @@
+1.9709999999999999	3.04	Alarm_bell_ringing
+3.967	5.018	Alarm_bell_ringing
+5.891	6.954	Alarm_bell_ringing
+7.886	8.937000000000001	Alarm_bell_ringing

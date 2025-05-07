@@ -1,0 +1,3 @@
+0.88	3.24	Cat
+3.88	9.16	Cat
+0.0	10.0	Electric_shaver_toothbrush

@@ -1,0 +1,13 @@
+0.0	1.54	Cat
+9.26	9.46	Cat
+0.0	0.92	Dishes
+1.04	1.6400000000000001	Dishes
+2.46	2.72	Dishes
+3.56	3.86	Dishes
+4.76	5.12	Dishes
+5.34	5.5600000000000005	Dishes
+5.9	6.2	Dishes
+6.98	7.3	Dishes
+8.16	8.46	Dishes
+9.22	9.5	Dishes
+0.0	1.1	gunfire

@@ -1,0 +1,4 @@
+[ result sed vali segment_based macro f1 : 0.512910, er : 0.805048, pre : 0.677071, recall : 0.445217, deletion : 0.554783, insertion : 0.250266 ]
+[ result sed vali event_based macro f1 : 0.277754, er : 1.174385, pre : 0.396285, recall : 0.250270, deletion : 0.749730, insertion : 0.424655 ]
+[ result sed test segment_based macro f1 : 0.458675, er : 0.860622, pre : 0.637138, recall : 0.374413, deletion : 0.625587, insertion : 0.235034 ]
+[ result sed test event_based macro f1 : 0.259607, er : 1.170908, pre : 0.368846, recall : 0.227582, deletion : 0.772418, insertion : 0.398489 ]

@@ -1,0 +1,8 @@
+0.0	2.56	Dishes
+2.72	3.06	Dishes
+3.92	4.3	Dishes
+4.44	4.62	Dishes
+4.8	4.92	Dishes
+5.16	5.98	Dishes
+6.34	10.0	Dishes
+0.0	10.0	Frying

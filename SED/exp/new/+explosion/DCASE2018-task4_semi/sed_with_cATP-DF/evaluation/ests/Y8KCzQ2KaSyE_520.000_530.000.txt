@@ -1,0 +1,3 @@
+0.0	8.28	Blender
+0.0	7.6000000000000005	Vacuum_cleaner
+0.0	7.72	car

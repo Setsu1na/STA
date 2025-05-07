@@ -1,0 +1,2 @@
+3.52	10.0	Frying
+0.0	10.0	Running_water

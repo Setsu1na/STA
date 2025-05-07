@@ -1,0 +1,2 @@
+0.0	10.0	Electric_shaver_toothbrush
+4.656000000000001	10.0	Speech

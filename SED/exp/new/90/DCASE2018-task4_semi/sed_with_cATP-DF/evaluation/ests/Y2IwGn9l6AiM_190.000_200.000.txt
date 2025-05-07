@@ -1,0 +1,2 @@
+0.0	2.22	gunfire
+5.42	10.0	gunfire

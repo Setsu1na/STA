@@ -1,0 +1,4 @@
+[ result sed vali segment_based macro f1 : nan, er : 1.000000, pre : nan, recall : 0.000000, deletion : 1.000000, insertion : 0.000000 ]
+[ result sed vali event_based macro f1 : 0.000000, er : 1.000000, pre : 0.000000, recall : 0.000000, deletion : 1.000000, insertion : 0.000000 ]
+[ result sed test segment_based macro f1 : nan, er : 1.000000, pre : nan, recall : 0.000000, deletion : 1.000000, insertion : 0.000000 ]
+[ result sed test event_based macro f1 : 0.000000, er : 1.000000, pre : 0.000000, recall : 0.000000, deletion : 1.000000, insertion : 0.000000 ]

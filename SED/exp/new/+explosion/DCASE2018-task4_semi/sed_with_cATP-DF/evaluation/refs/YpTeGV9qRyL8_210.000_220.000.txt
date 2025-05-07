@@ -1,0 +1,4 @@
+0.0	10.0	Frying
+4.412	4.662	Dishes
+4.992	5.77	Dishes
+7.291	10.0	Speech

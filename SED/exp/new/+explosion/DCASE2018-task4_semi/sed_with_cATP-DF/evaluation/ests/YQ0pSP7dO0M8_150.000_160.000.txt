@@ -1,0 +1,9 @@
+1.0	1.26	Dishes
+1.48	2.18	Dishes
+2.4	2.58	Dishes
+2.68	2.8000000000000003	Dishes
+2.9	3.08	Dishes
+3.24	3.38	Dishes
+7.08	7.26	Dishes
+0.0	10.0	Frying
+1.02	10.0	Running_water

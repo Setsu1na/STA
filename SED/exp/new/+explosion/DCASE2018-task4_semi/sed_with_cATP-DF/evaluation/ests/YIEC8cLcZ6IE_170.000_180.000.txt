@@ -1,0 +1,10 @@
+0.78	1.4000000000000001	Dishes
+1.62	1.82	Dishes
+2.0	2.12	Dishes
+2.9	3.48	Dishes
+3.58	5.14	Dishes
+5.22	5.38	Dishes
+5.96	6.54	Dishes
+6.66	7.2	Dishes
+7.58	8.78	Dishes
+0.0	10.0	Electric_shaver_toothbrush

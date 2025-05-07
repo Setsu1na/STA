@@ -1,0 +1,9 @@
+0.0	0.64	Dishes
+0.74	1.28	Dishes
+1.52	3.3200000000000003	Dishes
+3.46	7.24	Dishes
+7.38	7.58	Dishes
+7.92	8.18	Dishes
+8.98	9.42	Dishes
+9.5	9.86	Dishes
+0.0	10.0	Speech

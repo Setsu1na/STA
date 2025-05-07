@@ -1,0 +1,8 @@
+0.0	0.08	Dishes
+0.72	0.84	Dishes
+5.2	5.34	Dishes
+5.42	5.86	Dishes
+8.24	8.38	Dishes
+8.5	8.64	Dishes
+0.0	10.0	Electric_shaver_toothbrush
+0.0	10.0	Frying

@@ -1,0 +1,9 @@
+0.0	0.74	Dishes
+1.98	2.2600000000000002	Dishes
+2.4	3.56	Dishes
+3.66	4.14	Dishes
+4.44	6.24	Dishes
+7.32	9.48	Dishes
+9.68	9.94	Dishes
+3.5	10.0	Frying
+0.0	10.0	Speech

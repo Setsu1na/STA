@@ -1,0 +1,2 @@
+4.64	10.0	Vacuum_cleaner
+0.0	10.0	fire

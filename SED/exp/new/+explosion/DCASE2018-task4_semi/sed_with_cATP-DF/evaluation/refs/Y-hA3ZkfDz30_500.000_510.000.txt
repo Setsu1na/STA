@@ -1,0 +1,4 @@
+0.0	1.295	Speech
+2.292	3.023	Speech
+3.432	6.473	Speech
+7.162000000000001	10.0	Vacuum_cleaner

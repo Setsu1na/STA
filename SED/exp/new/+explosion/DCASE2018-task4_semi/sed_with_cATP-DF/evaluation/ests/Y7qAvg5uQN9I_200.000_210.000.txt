@@ -1,0 +1,2 @@
+0.0	8.94	Blender
+0.0	8.8	Vacuum_cleaner

@@ -1,0 +1,4 @@
+0.0	0.25	Speech
+0.47	1.41	Speech
+1.787	3.653	Speech
+3.938	10.0	Speech
