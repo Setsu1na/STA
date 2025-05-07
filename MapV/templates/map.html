@@ -1,0 +1,236 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+    <script src="../static/js/jquery.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .mapboxgl-popup {
+            max-width: 200px;
+        }
+    </style>
+    <style type="text/css">
+        #info {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info"></div>
+
+<script>
+    document.getElementById("info").innerHTML="智慧城市综合管理系统";
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoicHJvYmV0cyIsImEiOiJja2E2am1seHQwMGhnMzNvMDViZ3I3Y3R6In0.YeM2Ungr64olB7bOdMUkQg';
+    var map = new mapboxgl.Map({
+        //style: 'mapbox://styles/mapbox/dark-v10',
+        style: 'mapbox://styles/probets/cka9bjhp1196u1inrbb02q4l6',
+        center: [114.36, 30.54],
+        zoom: 4.5,
+        pitch: 45,
+        bearing: 0,
+        container: 'map',
+        antialias: true
+    });
+
+
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([114.36, 30.54])
+        .addTo(map);
+
+    $("#map").click(
+        function noNumbers(e) {
+            marker.remove();
+            // create the popup
+            var popup = new mapboxgl.Popup({ offset: 25 }).setHTML('地址: 湖北省武汉市武昌区八一路<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉大学桂园四舍<br>安全系数: 0.2<br><a href="http://localhost:8080/">查看详情</a>');
+            var n = new mapboxgl.Marker({color: 'red'})
+                .setLngLat([114.36, 30.54])
+                .setPopup(popup) // sets a popup on this marker
+                .addTo(map);
+            }
+        );
+
+        // create the popup
+    var popup1 = new mapboxgl.Popup({ offset: 25 }).setHTML('安全系数:0.5<br><a href="http://localhost:8080/">查看详情</a>');
+
+    var marker1 = new mapboxgl.Marker()
+        .setLngLat([90.36, 38.54])
+        .setPopup(popup1) // sets a popup on this marker
+        .addTo(map);
+
+    // create the popup
+    var popup2 = new mapboxgl.Popup({ offset: 25 }).setHTML('安全系数:0.6<br><a href="http://localhost:8080/">查看详情</a>');
+
+    var marker2 = new mapboxgl.Marker()
+        .setLngLat([120.36, 44.54])
+        .setPopup(popup2) // sets a popup on this marker
+        .addTo(map);
+
+        // create the popup
+    var popup3 = new mapboxgl.Popup({ offset: 25 }).setHTML('安全系数:0.7<br><a href="http://localhost:8080/">查看详情</a>');
+
+    var marker3 = new mapboxgl.Marker()
+        .setLngLat([112.36, 22.54])
+        .setPopup(popup3) // sets a popup on this marker
+        .addTo(map);
+
+    // The 'building' layer in the mapbox-streets vector source contains building-height
+    // data from OpenStreetMap.
+    map.on('load', function() {
+        // Insert the layer beneath any symbol layer.
+        var layers = map.getStyle().layers;
+
+        var labelLayerId;
+        for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
+
+map.addLayer(
+{
+    'id': '3d-buildings',
+    'source': 'composite',
+    'source-layer': 'building',
+    'filter': ['==', 'extrude', 'true'],
+    'type': 'fill-extrusion',
+    'minzoom': 15,
+    'paint': {
+    'fill-extrusion-color': '#aaa',
+
+// use an 'interpolate' expression to add a smooth transition effect to the
+// buildings as the user zooms in
+'fill-extrusion-height': [
+'interpolate',
+['linear'],
+['zoom'],
+15,
+0,
+15.05,
+['get', 'height']
+],
+'fill-extrusion-base': [
+'interpolate',
+['linear'],
+['zoom'],
+15,
+0,
+15.05,
+['get', 'min_height']
+],
+'fill-extrusion-opacity': 0.6
+}
+},
+labelLayerId
+);
+});
+map.on('load', function() {
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [177.038659, 38.931567]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Capital Pride Parade</strong><p>The annual <a href="http://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>',
+
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [117.043444, 38.909664]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist <a href="http://www.muhsinah.com" target="_blank" title="Opens in a new window">Muhsinah</a> plays the <a href="http://www.blackcatdc.com">Black Cat</a> (1811 14th Street NW) tonight with <a href="http://www.exitclov.com" target="_blank" title="Opens in a new window">Exit Clov</a> and <a href="http://godsilla.bandcamp.com" target="_blank" title="Opens in a new window">Gods’illa</a>. 9:00 p.m. $12.</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [117.031706, 38.914581]
+}
+}
+
+]
+}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': '{icon}-15',
+'icon-allow-overlap': true
+}
+});
+
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function(e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function() {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+});
+});
+
+
+
+
+</script>
+</body>
+</html>

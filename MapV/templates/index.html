@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>\
+      <style type="text/css">
+          #web_bg{
+              position:fixed;
+              top: 0;
+              left: 0;
+              width:100%;
+              height:100%;
+              min-width: 1000px;
+              z-index:-10;
+              zoom: 1;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center 0;
+            }
+
+      </style>
+      <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+      <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+      <script src="../static/js/jquery-3.4.1.js"></script>
+
+  </head>
+
+<body>
+    <div id="web_bg" style="background-image: url('../static/images/bbb.jpg');"></div>
+        <div class="row">
+            <span id="high" type="text" style="font-size: 30px;top: 130px; left: 300px;position: fixed"> </span>
+            <span id="medium" type="text" style="font-size: 30px;top: 130px; left: 600px;position: fixed"> </span>
+            <span id="low" type="text" style="font-size: 30px;top: 130px; left: 900px;position: fixed"> </span>
+            <span id="score" type="text" style="font-size: 40px;top: 100px; left: 1373px;position: fixed; color: orange;"> </span>
+        </div>
+        <div class="row">
+
+            <video id="vd" class="video-js" controls preload="auto" width="1024" height="512" data-setup="{}" style="height: 480px; width: 850px;top: 205px; left: 280px;position: fixed">
+                <source src="/part_to_full", type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            <div class="col" style="margin-top: 195px;">
+                <div id="prob1" type="text" style="font-size: 20px;top: 300px; left: 1370px;position: fixed"> </div>
+                <div id="prob2" type="text" style="font-size: 20px;top: 20px; left: 270px;position: fixed"> </div>
+                <div id="prob3" type="text" style="font-size: 20px;top: 25px; left: 320px;position: fixed"> </div>
+                <div id="partProb1" type="text" style="font-size: 20px;top: 243px; left: 180px;position: fixed"> </div>
+                <div id="partProb2" type="text" style="font-size: 20px;top: 102px; left: 180px;position: fixed"> </div>
+            </div>
+        </div>
+
+
+
+<script>
+        $(document).ready(
+            function () {
+                var h = 10, m = 10, l = 10, sc = 70;
+                var p1 = 90, p2 = 80, p3 = 50;
+                var pp1 = 90, pp2 = 80;
+                let pRange1 = [90.5, 98.6, 95.2, 97.6, 91.4];
+                let pRange2 = [84.2, 88.4, 81.5, 89.6, 86.7];
+                let pRange3 = [56.1, 57.6, 52.2, 53.6, 59.4];
+                let ppRange1 = [90.5, 98.6, 95.2, 97.6, 91.4];
+                let ppRange2 = [84.2, 88.4, 81.5, 89.6, 86.7];
+
+                start();
+
+                function start() {
+                    setInterval(highTimer, 750);
+                    setInterval(mediumTimer, 950);
+                    setInterval(lowTimer, 1550);
+                    setInterval(scoreTimer, 1500);
+
+                    setInterval(prob1Timer, 450);
+                    setInterval(prob2Timer, 250);
+                    setInterval(prob3Timer, 550);
+                    setInterval(partProb1Timer, 1600);
+                    setInterval(partProb2Timer, 1500);
+                }
+
+                function highTimer() {
+                    document.getElementById("high").innerHTML = h;
+                    h += 1;
+                }
+
+                function mediumTimer() {
+                    document.getElementById("medium").innerHTML = m;
+                    m += 1;
+                }
+
+                function lowTimer() {
+                    document.getElementById("low").innerHTML = l;
+                    l += 1;
+                }
+
+                function scoreTimer() {
+                    document.getElementById("score").innerHTML = sc;
+                    sc += 1;
+                }
+
+                function prob1Timer() {
+                    document.getElementById("prob1").innerHTML = p1 + "%";
+                    var pId1 = parseInt(5*Math.random());
+                    p1 = pRange1[pId1];
+                }
+
+                function prob2Timer() {
+                    document.getElementById("prob2").innerHTML = p2 + "%";
+                    var pId2 = parseInt(5*Math.random());
+                    p2 = pRange2[pId2];
+                }
+
+                function prob3Timer() {
+                    document.getElementById("prob3").innerHTML = p3 + "%";
+                    var pId3 = parseInt(5*Math.random());
+                    p3 = pRange3[pId3];
+                }
+
+                function partProb1Timer() {
+                    document.getElementById("partProb1").innerHTML = pp1 + "%";
+                    var ppId1 = parseInt(5*Math.random());
+                    pp1 = ppRange1[ppId1];
+                }
+
+                function partProb2Timer() {
+                    document.getElementById("partProb2").innerHTML = pp2 + "%";
+                    var ppId2 = parseInt(5*Math.random());
+                    pp2 = ppRange2[ppId2];
+                }
+
+            }
+        );
+    </script>
+
+
+</body>
+
+</html>

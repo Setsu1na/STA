@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		#box{width: 150px;height: 200px;background: skyblue;position: fixed;top: 400px;right: -150px;}
+		#box span{background: red;width: 20px;display: inline-block;position: absolute;right: 150px;
+			top: 50%;height: 90px;margin-top: -45px;}
+	</style>
+	<script type="text/javascript">
+		window.onload=init;
+		function init() {
+			var o=document.getElementById('more');
+			var speed=5;//速度
+			var timer;
+			//鼠标事件
+//			o.onclick=function(){
+//				clearInterval(timer);//清除定时器
+//				timer=setInterval(moveRight,50);
+//			};
+			//鼠标离开事件
+			o.onclick=function(){
+				clearInterval(timer);//清除定时器
+				timer=setInterval(moveLeft,50);
+			};
+
+			//滑块移动
+			function moveRight(){
+				var l=o.offsetLeft;//左边距
+				if(l>=0){
+					clearInterval(timer);//停止
+				}else{
+					o.style.left=l+speed+'px';	//移动
+				}
+
+			}
+			//向左移动
+			function moveLeft(){
+				var l=o.offsetLeft;//左边距
+				if(l<=-150){
+					clearInterval(timer);
+				}else{
+					o.style.left=l-speed+'px';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<span id="more">更多文章</span>
+	</div>
+</body>
+</html>

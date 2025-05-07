@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+      <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+      <script src="../static/js/jquery-3.4.1.js"></script>
+    <style type="text/css">
+          #web_bg{
+              position:fixed;
+              top: 0;
+              left: 0;
+              width:100%;
+              height:100%;
+              min-width: 1000px;
+              z-index:-10;
+              zoom: 1;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center 0;
+            }
+
+      </style>
+</head>
+<body>
+    <div id="web_bg" style="background-image: url('../static/images/50104.png');"></div>
+<video id="vd" class="video-js" controls preload="auto" width="1024" height="512" data-setup="{}" style="height: 700px; width: 1240px;top: 120px; left: 150px;position: fixed">
+                <source src="/part_to_full", type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+</body>
+</html>
