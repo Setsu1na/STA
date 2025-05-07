@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/menu/menu",
+    "pages/info/info",
+    "pages/contact/contact",
+    "pages/vedio/vedio",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/map/map"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
